@@ -71,13 +71,13 @@ namespace BooksShop
                     }
                     if (roles == 3)
                     {
-                        MessageBox.Show("df33");
+                        Auto.Content = new User();
                     }
 
 
                     if (roles == 2)
                     {
-                        MessageBox.Show("fefdf");
+                        Auto.Content = new Manager();
                     }
                 }
 

@@ -29,6 +29,8 @@ namespace BooksShop
         TypeProductTableAdapter productType;
         ManufactureTableAdapter manufacture;
         View_ProductTableAdapter productView;
+        OrderProductTableAdapter orderProductTableAdapter;
+
 
         public ProductAdmin()
         {
@@ -60,7 +62,7 @@ namespace BooksShop
 
         private void Insert_Click(object sender, RoutedEventArgs e)
         {
-            //int manuf = (int)CBManufProduct.SelectedValue;
+            
             bool name = Regex.Match(NameProduct.Text, "^[А-Я][а-яА-Я]*$").Success;
             if(NameProduct.Text.Equals("") || name)
             {
@@ -104,6 +106,20 @@ namespace BooksShop
             Exits.Content = new Administrator();
         }
 
+        private void DataGrid_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            DataRowView dataRowView = (DataRowView)DataGrid.SelectedItem;
+         if(dataRowView != null)
+            {
+                NameProduct.Text = dataRowView.Row.Field<string>("Название_товара");
+                CBTypeProduct.Text = dataRowView.Row.Field<string>("Тип_товара");
+                CBManufProduct.Text = dataRowView.Row.Field<string>("Страна_производителя");
+            }
+        }
 
+        private void InsOrder_Click(object sender, RoutedEventArgs e)
+        {
+           
+        }
     }
 }
