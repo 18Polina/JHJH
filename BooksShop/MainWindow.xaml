@@ -1,0 +1,31 @@
+﻿<Page x:Class="BooksShop.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:BooksShop"
+        mc:Ignorable="d"
+        Title="Авторизация" Height="450" Width="800" Background="White">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+        <TextBlock Grid.Column="1" Text="Авторизация" VerticalAlignment="Center" HorizontalAlignment="Center" Width="300" FontSize="20" TextAlignment="Center"/>
+        <TextBlock Grid.Row="1" Grid.Column="1" Text="Введите логин:" VerticalAlignment="Bottom" HorizontalAlignment="Center" FontSize="15"/>
+        <TextBox Grid.Row="2" Grid.Column="1" VerticalAlignment="Top" HorizontalAlignment="Center" Width="200" Height="20" Name="TXTLogin"/>
+        <TextBlock Grid.Row="2" Grid.Column="1" Text="Введите пароль:" VerticalAlignment="Bottom" HorizontalAlignment="Center" FontSize="15"/>
+        <TextBox Grid.Row="3" Grid.Column="1" VerticalAlignment="Top" HorizontalAlignment="Center" Width="200" Height="20" Name="TXTPassword"/>
+        <Button Grid.Column="1" Grid.Row="3" VerticalAlignment="Bottom" HorizontalAlignment="Center" Width="120" Height="30" Background="Salmon" Content="Авторизация" FontSize="15" Foreground="White" Name="Autorization" Click="Autorization_Click"/>
+        <DataGrid Height="0.1" Width="0.1" Name="DataGrid"/>
+        <Frame Grid.ColumnSpan="3" Grid.RowSpan="5" x:Name="Auto"/>
+    </Grid>
+</Page>

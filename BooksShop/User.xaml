@@ -1,0 +1,29 @@
+﻿<Page x:Class="BooksShop.User"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:BooksShop"
+        mc:Ignorable="d"
+        Title="Пользователь"  Height="450" Width="800"  Background="White">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+        <TextBlock Grid.Column="1" Text="Администратор" VerticalAlignment="Center" HorizontalAlignment="Center" Width="300" FontSize="20" TextAlignment="Center"/>
+        <Button Grid.Row="1" VerticalAlignment="Center" Grid.Column="1" Width="200" Height="40" Background="Salmon" Content="Товар" FontSize="15" Foreground="White" Name="Product" Click="Product_Click" />
+        <Button Grid.Row="2" VerticalAlignment="Center" Grid.Column="1" Width="200" Height="40" Background="Salmon" Content="Заказ" FontSize="15" Foreground="White" Name="Order" Click="Order_Click" />
+        <Button  Grid.Row="4" VerticalAlignment="Center" HorizontalAlignment="Left" Width="120" Height="30" Background="Salmon" Content="Выход" FontSize="15" Foreground="White" Name="Exit" Click="Exit_Click"/>
+        <Frame Grid.RowSpan="5" Grid.ColumnSpan="3" Name="Exits"/>
+
+    </Grid>
+</Page>
