@@ -508,27 +508,6 @@ SELECT ID_TypeProduct, Type FROM TypeProduct WHERE (ID_TypeProduct = @ID_TypePro
             </Mappings>
             <Sources />
           </TableAdapter>
-          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="View_OrderProductTableAdapter" GeneratorDataComponentClassName="View_OrderProductTableAdapter" Name="View_OrderProduct" UserDataComponentName="View_OrderProductTableAdapter">
-            <MainSource>
-              <DbSource ConnectionRef="BooksShopConnectionString (Settings)" DbObjectName="BooksShop.dbo.View_OrderProduct" DbObjectType="View" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
-                <SelectCommand>
-                  <DbCommand CommandType="Text" ModifiedByUser="false">
-                    <CommandText>SELECT ID_OrderProduct, Product_ID, [Название продукта], Order_ID, [Дата заказа], Количество FROM dbo.View_OrderProduct</CommandText>
-                    <Parameters />
-                  </DbCommand>
-                </SelectCommand>
-              </DbSource>
-            </MainSource>
-            <Mappings>
-              <Mapping SourceColumn="ID_OrderProduct" DataSetColumn="ID_OrderProduct" />
-              <Mapping SourceColumn="Product_ID" DataSetColumn="Product_ID" />
-              <Mapping SourceColumn="Название продукта" DataSetColumn="Название продукта" />
-              <Mapping SourceColumn="Order_ID" DataSetColumn="Order_ID" />
-              <Mapping SourceColumn="Дата заказа" DataSetColumn="Дата заказа" />
-              <Mapping SourceColumn="Количество" DataSetColumn="Количество" />
-            </Mappings>
-            <Sources />
-          </TableAdapter>
           <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="View_ProductTableAdapter" GeneratorDataComponentClassName="View_ProductTableAdapter" Name="View_Product" UserDataComponentName="View_ProductTableAdapter">
             <MainSource>
               <DbSource ConnectionRef="BooksShopConnectionString (Settings)" DbObjectName="BooksShop.dbo.View_Product" DbObjectType="View" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
@@ -566,6 +545,27 @@ SELECT ID_TypeProduct, Type FROM TypeProduct WHERE (ID_TypeProduct = @ID_TypePro
               <Mapping SourceColumn="Дата_заказа" DataSetColumn="Дата_заказа" />
               <Mapping SourceColumn="Customer_ID" DataSetColumn="Customer_ID" />
               <Mapping SourceColumn="Фамилия" DataSetColumn="Фамилия" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="View_OrderProductTableAdapter" GeneratorDataComponentClassName="View_OrderProductTableAdapter" Name="View_OrderProduct" UserDataComponentName="View_OrderProductTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="BooksShopConnectionString (Settings)" DbObjectName="BooksShop.dbo.View_OrderProduct" DbObjectType="View" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>SELECT ID_OrderProduct, Номер_товара, [Название продукта], Номер_заказа, [Дата заказа], Количество FROM dbo.View_OrderProduct</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="ID_OrderProduct" DataSetColumn="ID_OrderProduct" />
+              <Mapping SourceColumn="Номер_товара" DataSetColumn="Номер_товара" />
+              <Mapping SourceColumn="Название продукта" DataSetColumn="Название продукта" />
+              <Mapping SourceColumn="Номер_заказа" DataSetColumn="Номер_заказа" />
+              <Mapping SourceColumn="Дата заказа" DataSetColumn="Дата заказа" />
+              <Mapping SourceColumn="Количество" DataSetColumn="Количество" />
             </Mappings>
             <Sources />
           </TableAdapter>
@@ -737,36 +737,6 @@ SELECT ID_TypeProduct, Type FROM TypeProduct WHERE (ID_TypeProduct = @ID_TypePro
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="View_OrderProduct" msprop:Generator_RowEvHandlerName="View_OrderProductRowChangeEventHandler" msprop:Generator_RowDeletedName="View_OrderProductRowDeleted" msprop:Generator_RowDeletingName="View_OrderProductRowDeleting" msprop:Generator_RowEvArgName="View_OrderProductRowChangeEvent" msprop:Generator_TablePropName="View_OrderProduct" msprop:Generator_RowChangedName="View_OrderProductRowChanged" msprop:Generator_RowChangingName="View_OrderProductRowChanging" msprop:Generator_TableClassName="View_OrderProductDataTable" msprop:Generator_RowClassName="View_OrderProductRow" msprop:Generator_TableVarName="tableView_OrderProduct" msprop:Generator_UserTableName="View_OrderProduct">
-          <xs:complexType>
-            <xs:sequence>
-              <xs:element name="ID_OrderProduct" msprop:Generator_ColumnPropNameInRow="ID_OrderProduct" msprop:Generator_ColumnPropNameInTable="ID_OrderProductColumn" msprop:Generator_ColumnVarNameInTable="columnID_OrderProduct" msprop:Generator_UserColumnName="ID_OrderProduct" type="xs:int" />
-              <xs:element name="Product_ID" msprop:Generator_ColumnPropNameInRow="Product_ID" msprop:Generator_ColumnPropNameInTable="Product_IDColumn" msprop:Generator_ColumnVarNameInTable="columnProduct_ID" msprop:Generator_UserColumnName="Product_ID" type="xs:int" />
-              <xs:element name="Название_x0020_продукта" msprop:Generator_ColumnPropNameInRow="Название_продукта" msprop:Generator_ColumnPropNameInTable="Название_продуктаColumn" msprop:Generator_ColumnVarNameInTable="columnНазвание_продукта" msprop:Generator_UserColumnName="Название продукта">
-                <xs:simpleType>
-                  <xs:restriction base="xs:string">
-                    <xs:maxLength value="50" />
-                  </xs:restriction>
-                </xs:simpleType>
-              </xs:element>
-              <xs:element name="Order_ID" msprop:Generator_ColumnPropNameInRow="Order_ID" msprop:Generator_ColumnPropNameInTable="Order_IDColumn" msprop:Generator_ColumnVarNameInTable="columnOrder_ID" msprop:Generator_UserColumnName="Order_ID" type="xs:int" />
-              <xs:element name="Дата_x0020_заказа" msprop:Generator_ColumnPropNameInRow="Дата_заказа" msprop:Generator_ColumnPropNameInTable="Дата_заказаColumn" msprop:Generator_ColumnVarNameInTable="columnДата_заказа" msprop:Generator_UserColumnName="Дата заказа">
-                <xs:simpleType>
-                  <xs:restriction base="xs:string">
-                    <xs:maxLength value="50" />
-                  </xs:restriction>
-                </xs:simpleType>
-              </xs:element>
-              <xs:element name="Количество" msprop:Generator_ColumnPropNameInRow="Количество" msprop:Generator_ColumnPropNameInTable="КоличествоColumn" msprop:Generator_ColumnVarNameInTable="columnКоличество" msprop:Generator_UserColumnName="Количество">
-                <xs:simpleType>
-                  <xs:restriction base="xs:string">
-                    <xs:maxLength value="50" />
-                  </xs:restriction>
-                </xs:simpleType>
-              </xs:element>
-            </xs:sequence>
-          </xs:complexType>
-        </xs:element>
         <xs:element name="View_Product" msprop:Generator_RowEvHandlerName="View_ProductRowChangeEventHandler" msprop:Generator_RowDeletedName="View_ProductRowDeleted" msprop:Generator_RowDeletingName="View_ProductRowDeleting" msprop:Generator_RowEvArgName="View_ProductRowChangeEvent" msprop:Generator_TablePropName="View_Product" msprop:Generator_RowChangedName="View_ProductRowChanged" msprop:Generator_RowChangingName="View_ProductRowChanging" msprop:Generator_TableClassName="View_ProductDataTable" msprop:Generator_RowClassName="View_ProductRow" msprop:Generator_TableVarName="tableView_Product" msprop:Generator_UserTableName="View_Product">
           <xs:complexType>
             <xs:sequence>
@@ -819,6 +789,36 @@ SELECT ID_TypeProduct, Type FROM TypeProduct WHERE (ID_TypeProduct = @ID_TypePro
             </xs:sequence>
           </xs:complexType>
         </xs:element>
+        <xs:element name="View_OrderProduct" msprop:Generator_RowEvHandlerName="View_OrderProductRowChangeEventHandler" msprop:Generator_RowDeletedName="View_OrderProductRowDeleted" msprop:Generator_RowDeletingName="View_OrderProductRowDeleting" msprop:Generator_RowEvArgName="View_OrderProductRowChangeEvent" msprop:Generator_TablePropName="View_OrderProduct" msprop:Generator_RowChangedName="View_OrderProductRowChanged" msprop:Generator_RowChangingName="View_OrderProductRowChanging" msprop:Generator_TableClassName="View_OrderProductDataTable" msprop:Generator_RowClassName="View_OrderProductRow" msprop:Generator_TableVarName="tableView_OrderProduct" msprop:Generator_UserTableName="View_OrderProduct">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="ID_OrderProduct" msprop:Generator_ColumnPropNameInRow="ID_OrderProduct" msprop:Generator_ColumnPropNameInTable="ID_OrderProductColumn" msprop:Generator_ColumnVarNameInTable="columnID_OrderProduct" msprop:Generator_UserColumnName="ID_OrderProduct" type="xs:int" />
+              <xs:element name="Номер_товара" msprop:Generator_ColumnPropNameInRow="Номер_товара" msprop:Generator_ColumnPropNameInTable="Номер_товараColumn" msprop:Generator_ColumnVarNameInTable="columnНомер_товара" msprop:Generator_UserColumnName="Номер_товара" type="xs:int" />
+              <xs:element name="Название_x0020_продукта" msprop:Generator_ColumnPropNameInRow="Название_продукта" msprop:Generator_ColumnPropNameInTable="Название_продуктаColumn" msprop:Generator_ColumnVarNameInTable="columnНазвание_продукта" msprop:Generator_UserColumnName="Название продукта">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Номер_заказа" msprop:Generator_ColumnPropNameInRow="Номер_заказа" msprop:Generator_ColumnPropNameInTable="Номер_заказаColumn" msprop:Generator_ColumnVarNameInTable="columnНомер_заказа" msprop:Generator_UserColumnName="Номер_заказа" type="xs:int" />
+              <xs:element name="Дата_x0020_заказа" msprop:Generator_ColumnPropNameInRow="Дата_заказа" msprop:Generator_ColumnPropNameInTable="Дата_заказаColumn" msprop:Generator_ColumnVarNameInTable="columnДата_заказа" msprop:Generator_UserColumnName="Дата заказа">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Количество" msprop:Generator_ColumnPropNameInRow="Количество" msprop:Generator_ColumnPropNameInTable="КоличествоColumn" msprop:Generator_ColumnVarNameInTable="columnКоличество" msprop:Generator_UserColumnName="Количество">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
       </xs:choice>
     </xs:complexType>
     <xs:unique name="Constraint1" msdata:PrimaryKey="true">
@@ -853,10 +853,6 @@ SELECT ID_TypeProduct, Type FROM TypeProduct WHERE (ID_TypeProduct = @ID_TypePro
       <xs:selector xpath=".//mstns:TypeProduct" />
       <xs:field xpath="mstns:ID_TypeProduct" />
     </xs:unique>
-    <xs:unique name="View_OrderProduct_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
-      <xs:selector xpath=".//mstns:View_OrderProduct" />
-      <xs:field xpath="mstns:ID_OrderProduct" />
-    </xs:unique>
     <xs:unique name="View_Product_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
       <xs:selector xpath=".//mstns:View_Product" />
       <xs:field xpath="mstns:ID_Product" />
@@ -864,6 +860,10 @@ SELECT ID_TypeProduct, Type FROM TypeProduct WHERE (ID_TypeProduct = @ID_TypePro
     <xs:unique name="View_Order_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
       <xs:selector xpath=".//mstns:View_Order" />
       <xs:field xpath="mstns:ID_Order" />
+    </xs:unique>
+    <xs:unique name="View_OrderProduct_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:View_OrderProduct" />
+      <xs:field xpath="mstns:ID_OrderProduct" />
     </xs:unique>
   </xs:element>
   <xs:annotation>

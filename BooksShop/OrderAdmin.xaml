@@ -27,6 +27,9 @@
         <TextBlock Grid.Row="2" VerticalAlignment="Center" Width="200" Height="20" Text="Фамилия клиента" FontSize="15" TextAlignment="Center"/>
         <ComboBox Grid.Row="2" VerticalAlignment="Bottom" Width="200" Height="30" Name="CBSurname">
         </ComboBox>
+        <TextBlock Grid.Row="2" VerticalAlignment="Center" Width="200" Height="20" Text="Фамилия клиента" FontSize="15" TextAlignment="Center"/>
+        <ComboBox Grid.Row="2" VerticalAlignment="Bottom" Width="200" Height="30" Name="CBQuantity">
+        </ComboBox>
 
         <Button  Grid.Row="1" Grid.Column="2" VerticalAlignment="Center" HorizontalAlignment="Center" Width="200" Height="30" Background="Salmon" Content="Изменить товар" FontSize="15" Foreground="White" Name="Update" Click="Update_Click"/>
         <Button   VerticalAlignment="Top" HorizontalAlignment="Left" Width="120" Height="30" Background="Salmon" Content="Выход" FontSize="15" Foreground="White" Name="Exit" Click="Exit_Click"/>
@@ -40,20 +43,17 @@
                             <ColumnDefinition Width="400"/>
                             <ColumnDefinition Width="300"/>
                         </Grid.ColumnDefinitions>
-
-                        <!--<Grid.ContextMenu>
-                            <ContextMenu>
-                                <MenuItem Header=" Добавить в заказ" Name="InsOrder" Click="InsOrder_Click"/>
-                            </ContextMenu>
-                        </Grid.ContextMenu>-->
                         <StackPanel>
-                            <TextBlock Text="Дата заказа" HorizontalAlignment="Center"/>
-                            <DatePicker Text="{Binding Название_товара}" HorizontalAlignment="Center"/>
-
+                            <TextBlock Text="Номер_товара" HorizontalAlignment="Center"/>
+                            <TextBlock Text="{Binding Номер_товара}" HorizontalAlignment="Center"/>
+                        </StackPanel>
+                        <StackPanel>
+                            <TextBlock Text="Номер_заказа" HorizontalAlignment="Right" Grid.Column="1"/>
+                            <TextBlock Text="{Binding Номер_заказа}" HorizontalAlignment="Right"/>
                         </StackPanel>
                         <StackPanel Grid.Column="1">
-                            <TextBlock Text="Фамилия клиента" HorizontalAlignment="Center"/>
-                            <TextBlock Text="{Binding Фамилия}" TextAlignment="Center"/>
+                            <TextBlock Text="Номер_товара" HorizontalAlignment="Center" Grid.Column="2"/>
+                            <TextBlock Text="{Binding Количество}" TextAlignment="Center"/>
                         </StackPanel>
                     </Grid>
                 </DataTemplate>

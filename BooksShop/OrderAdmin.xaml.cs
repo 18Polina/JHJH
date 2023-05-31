@@ -27,6 +27,8 @@ namespace BooksShop
         OrderTableAdapter order;
         CustomerTableAdapter customer;
         View_OrderTableAdapter orderView;
+        View_OrderProductTableAdapter orderProduct;
+        ProductTableAdapter tableAdapter;
         public OrderAdmin()
         {
             InitializeComponent();
@@ -34,17 +36,21 @@ namespace BooksShop
             order = new OrderTableAdapter();
             customer = new CustomerTableAdapter();
             orderView = new View_OrderTableAdapter();
+            tableAdapter = new ProductTableAdapter();
+            orderProduct = new View_OrderProductTableAdapter();
 
             order.Fill(dataSet.Order);
             customer.Fill(dataSet.Customer);
             orderView.Fill(dataSet.View_Order);
+            tableAdapter.Fill(dataSet.Product);
+            orderProduct.Fill(dataSet.View_OrderProduct);
 
             CBSurname.ItemsSource = dataSet.Customer.DefaultView;
             CBSurname.DisplayMemberPath = "Surname";
             CBSurname.SelectedValuePath = "ID_Customer";
 
-            DataGrid.ItemsSource = dataSet.View_Order.DefaultView;
-            DataGrid.SelectedValuePath = "ID_Order";
+            DataGrid.ItemsSource = dataSet.View_OrderProduct.DefaultView;
+            DataGrid.SelectedValuePath = "ID_OrderProduct";
         }
 
         private void Update_Click(object sender, RoutedEventArgs e)
@@ -68,8 +74,9 @@ namespace BooksShop
             DataRowView dataRowView = (DataRowView)DataGrid.SelectedItem;
             if(dataRowView != null)
             {
-                CBDateOrder.Text = dataRowView.Row.Field<string>("Дата_заказа");
-                CBSurname.Text = dataRowView.Row.Field<string>("Фамилия");
+                CBDateOrder.Text = dataRowView.Row.Field<string>("Номер_товара");
+                CBSurname.Text = dataRowView.Row.Field<string>("Номер_заказа");
+                CBQuantity.Text = dataRowView.Row.Field<string>("Количество");
             }
         }
     }

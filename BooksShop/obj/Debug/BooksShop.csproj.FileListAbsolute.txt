@@ -32,3 +32,5 @@ C:\Users\Polina\source\repos\BooksShop\BooksShop\obj\Debug\OrderUser.baml
 C:\Users\Polina\source\repos\BooksShop\BooksShop\obj\Debug\ProductAdmin.baml
 C:\Users\Polina\source\repos\BooksShop\BooksShop\obj\Debug\ProductManager.baml
 C:\Users\Polina\source\repos\BooksShop\BooksShop\obj\Debug\ProductUser.baml
+C:\Users\Polina\source\repos\BooksShop\BooksShop\obj\Debug\Window1.g.cs
+C:\Users\Polina\source\repos\BooksShop\BooksShop\obj\Debug\Window1.baml
